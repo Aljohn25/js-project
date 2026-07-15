@@ -10,3 +10,16 @@ function getComputerChoice(){
     return choices[randomIndex];
 }
 console.log(getComputerChoice());
+
+function getHumanChoice (){
+    let userChoice = prompt("Make a choice between rock, paper and scissors!");
+
+    return userChoice;
+}
+
+let result = getHumanChoice();
+
+console.log (result);
+
+let humanScore = 0;
+let computerScore = 0;
