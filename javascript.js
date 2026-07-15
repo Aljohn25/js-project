@@ -9,7 +9,7 @@ function getComputerChoice(){
 
     return choices[randomIndex];
 }
-console.log(getComputerChoice());
+console.log("Computer picked " +  getComputerChoice() + ("!"));
 
 function getHumanChoice (){
     let userChoice = prompt("Make a choice between rock, paper and scissors!");
@@ -17,9 +17,27 @@ function getHumanChoice (){
     return userChoice;
 }
 
-let result = getHumanChoice();
 
-console.log (result);
 
 let humanScore = 0;
 let computerScore = 0;
+
+function playRound(humanChoice, ComputerChoice){
+    let cleanHumanChoice = humanChoice.toLowerCase();
+
+  
+  if (cleanHumanChoice === "rock") {
+    console.log("You picked Rock!");
+  } else if (cleanHumanChoice === "paper") {
+    console.log("You picked Paper!");
+  } else if (cleanHumanChoice === "scissors") {
+    console.log("You picked Scissors!");
+  } else {
+    console.log("Invalid choice! Please choose rock, paper, or scissors.");
+  }
+}
+
+const humanSelection = getHumanChoice();
+const computerSelection = getComputerChoice();
+
+playRound(humanSelection, computerSelection);
