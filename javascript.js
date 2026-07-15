@@ -71,7 +71,7 @@ playRound(humanSelection, computerSelection);
 console.log("Your score: " + humanScore, "Computer Score: " + computerScore);
 }
 
-console.log("\n=========================================");
+    console.log("\n=========================================");
     console.log("🏆 FINAL MATCH RESULTS 🏆");
     console.log(`Total Score -> You: ${humanScore} | Computer: ${computerScore}`);
     console.log("=========================================");
