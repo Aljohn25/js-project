@@ -9,6 +9,8 @@ function getComputerChoice(){
 
     return choices[randomIndex];
 };
+    let humanScore = 0;
+    let computerScore = 0;
 
 function playGame() {
   const hscore = document.querySelector("#humanScore");
@@ -18,9 +20,7 @@ function playGame() {
   const results = document.querySelector("#results");
   const displayHumanChoice = document.querySelector("#humanChoice");
   const displayComputerChoice = document.querySelector("#computerChoice");
-
-    let humanScore = 0;
-    let computerScore = 0;
+  const winner = document.querySelector("#winner");
 
   buttons.forEach(button => {
   button.addEventListener('click', (event) => {
@@ -70,9 +70,23 @@ function playGame() {
     hscore.textContent = "Your Score: " + humanScore;
     results.textContent = "Scissor beats paper, You win!";
   }
+    if (humanScore === 5){
+     winner.textContent = "You win!";
+
+  }
+  else if(computerScore === 5){
+     winner.textContent = "Computer Wins!";
+  }
+
   });
 });
 
+
 };
 playGame();
+
+function endGame() {
+  
+}
+
 

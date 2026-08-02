@@ -1,0 +1,20 @@
+body {
+    background-color: darkblue;
+}
+#gameTitle h1 {
+    color: yellow;
+    font-size: 50px;
+    text-align: center;
+    margin-top: 10px;
+    background-color: black;
+    margin-bottom: 10px;
+}
+
+.belowTitle {
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    font-size: 30px;
+    margin-left: 20px;
+    margin-right: 20px;
+}

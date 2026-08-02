@@ -10,15 +10,27 @@
     <script src="javascript.js" defer></script>
 </head>
 <body>
-    <div id=humanScore>Your Score: 0</div>
-    <div id=computerScore>Computer Score: 0</div>
+    <div id="gameTitle"> 
+        <h1 class="headerTitle"> ------------------------------------------------- ROCK, PAPER AND SCISSORS GAME ------------------------------------------------- </h1> 
+    </div>
+
+    <div class="belowTitle">
+        <div id=humanScore>Your Score: 0</div>
+        <div> Play to the best of 5!</div>
+        <div id=computerScore>Computer Score: 0</div>
+    </div>
+    <div class="displayChoice">
+        <div id="humanChoice"> </div>
+        <div id="computerChoice"> </div>
+    </div>
+    
     <div id="choices">
         <button>ROCK</button>
         <button>PAPER</button>
         <button>SCISSORS</button>
     </div>
-    <div id="humanChoice"> </div>
-    <div id="computerChoice"> </div>
+    
     <div id="results"> </div>
+    <div id="winner">--- ---</div>
 </body>
 </html>
