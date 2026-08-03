@@ -48,7 +48,7 @@ function playGame() {
   } else if (humanChoice === "rock" && computerChoice === "scissors"){
     humanScore++;
     hscore.textContent = "Your Score: " + humanScore;
-    results.textContent = "Rock beats Scissors, You win!";
+    results.textContent = "Rock beats Scissors, You win! 🙂";
 
   } else if (humanChoice === "paper" && computerChoice === "scissors"){
     computerScore++;
@@ -58,7 +58,7 @@ function playGame() {
   } else if (humanChoice === "paper" && computerChoice === "rock"){
     humanScore++;
     hscore.textContent = "Your Score: " + humanScore;
-    results.textContent = "Paper beats Rock, You win!";
+    results.textContent = "Paper beats Rock, You win! 🙂";
 
   } else if (humanChoice === "scissors" && computerChoice === "rock"){
     computerScore++;
@@ -68,7 +68,7 @@ function playGame() {
   } else if (humanChoice === "scissors" && computerChoice === "paper"){
     humanScore++;
     hscore.textContent = "Your Score: " + humanScore;
-    results.textContent = "Scissors beats Paper, You win!";
+    results.textContent = "Scissors beats Paper, You win! 🙂";
   }
     if (humanScore === 5){
      winner.textContent = "🎉 Congratulations! You won! 🎉";
