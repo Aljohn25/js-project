@@ -16,7 +16,7 @@ function playGame() {
   const hscore = document.querySelector("#humanScore");
   const cscore = document.querySelector("#computerScore");
   const choices = document.querySelector("#choices");
-  const buttons = choices.querySelectorAll('button');
+  const buttons = choices.querySelectorAll('.game');
   const results = document.querySelector("#results");
   const displayHumanChoice = document.querySelector("#humanChoice");
   const displayComputerChoice = document.querySelector("#computerChoice");
@@ -27,7 +27,7 @@ function playGame() {
     const humanChoice = event.target.textContent.toLowerCase();
     computerChoice = getComputerChoice();
     console.log(computerChoice);
-    displayHumanChoice.textContent = "You chose " + humanChoice + "!";
+    displayHumanChoice.textContent = "You chose " + humanChoice.charAt(0).toUpperCase() + humanChoice.slice(1) + "!";
     displayComputerChoice.textContent = "Computer chose " + computerChoice + "!";
 
     if (humanChoice === 'rock') {
@@ -38,50 +38,52 @@ function playGame() {
       console.log('You chose scissors!');
     }
     if (humanChoice === computerChoice){
-    results.textContent = "It's a tie!";
+    results.textContent = "It's a tie! 😑";
 
   } else if (humanChoice === "rock" && computerChoice === "paper"){
     computerScore++;
     cscore.textContent = "Computer Score: " + computerScore;
-    results.textContent = "paper beats rock, Computer wins!";
+    results.textContent = "Paper beats Rock, Computer wins! 🤣";
 
   } else if (humanChoice === "rock" && computerChoice === "scissors"){
     humanScore++;
     hscore.textContent = "Your Score: " + humanScore;
-    results.textContent = "rock beats scissors, You win!";
+    results.textContent = "Rock beats Scissors, You win!";
 
   } else if (humanChoice === "paper" && computerChoice === "scissors"){
     computerScore++;
     cscore.textContent = "Computer Score: " + computerScore;
-    results.textContent = "Scissor beats paper, Computer wins!";
+    results.textContent = "Scissors beats Paper, Computer wins! 🤣";
 
   } else if (humanChoice === "paper" && computerChoice === "rock"){
     humanScore++;
     hscore.textContent = "Your Score: " + humanScore;
-    results.textContent = "paper beats rock, You win!";
+    results.textContent = "Paper beats Rock, You win!";
 
   } else if (humanChoice === "scissors" && computerChoice === "rock"){
     computerScore++;
     cscore.textContent = "Computer Score: " + computerScore;
-    results.textContent = "rock beats scissor, Computer wins!";
+    results.textContent = "Rock beats Scissors, Computer wins! 🤣";
 
   } else if (humanChoice === "scissors" && computerChoice === "paper"){
     humanScore++;
     hscore.textContent = "Your Score: " + humanScore;
-    results.textContent = "Scissor beats paper, You win!";
+    results.textContent = "Scissors beats Paper, You win!";
   }
     if (humanScore === 5){
-     winner.textContent = "--Congratulations! You won!";
+     winner.textContent = "🎉 Congratulations! You won! 🎉";
+     winner.style.color = "yellowgreen";
      endGame();
 
   }
   else if(computerScore === 5){
-     winner.textContent = "--Game over! Computer Wins!--";
+     winner.textContent = "🤪 Game over! Computer Wins! 🤪";
+     winner.style.color = "red";
      endGame();
   }
 function endGame() {
   // 1. Select all your game buttons (adjust the selector class to match your HTML)
-  const buttons = document.querySelectorAll('#game');
+  const buttons = document.querySelectorAll('.game');
 
   // 2. Loop through each button and disable it
   buttons.forEach(button => {
