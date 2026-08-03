@@ -28,7 +28,7 @@ function playGame() {
     computerChoice = getComputerChoice();
     console.log(computerChoice);
     displayHumanChoice.textContent = "You chose " + humanChoice.charAt(0).toUpperCase() + humanChoice.slice(1) + "!";
-    displayComputerChoice.textContent = "Computer chose " + computerChoice + "!";
+    displayComputerChoice.textContent = "Computer chose " + computerChoice.charAt(0).toUpperCase() + computerChoice.slice(1) + "!";
 
     if (humanChoice === 'rock') {
       console.log('You chose rock!');
