@@ -1,13 +1,18 @@
 body {
-    background-color: darkblue;
+    background-color: #0F4C5C;
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
 }
 #gameTitle h1 {
     color: yellow;
     font-size: 50px;
-    text-align: center;
-    margin-top: 10px;
-    background-color: black;
+    display: flex;
+    margin-top: 0;
+    background-color: grey;
     margin-bottom: 10px;
+    justify-content: center;
 }
 
 .belowTitle {
@@ -17,4 +22,76 @@ body {
     font-size: 30px;
     margin-left: 20px;
     margin-right: 20px;
+    margin-bottom: 150px;
+}
+
+.winre {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    color:aliceblue;
+    font-size: 50px;
+    gap: 30px;
+    border-radius: 20px;
+    border: 522px black;
+}   
+
+
+
+.displayChoice {
+    display: flex;
+    justify-content: space-around;
+    color: orange;
+    font-size: 50px;
+    padding: 100px;
+    
+}
+
+.displayChoice .vs {
+    position: fixed;
+    
+    
+}
+
+.gamechoice {
+    display: flex;
+    justify-content: center;
+}
+
+#choices {
+    display: flex;
+    justify-content: center;
+    font-size: 300px;
+    gap: 500px;
+    max-width: 100%;
+    flex: 1;
+    
+}
+
+#game{
+    font-size: 60px;
+    cursor: pointer; 
+    background-color: blue;
+    width: 400px;
+}
+
+#replay {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    
+    
+}
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    font-size: 20px;
+    background-color: grey;
 }

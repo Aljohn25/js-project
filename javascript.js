@@ -71,13 +71,25 @@ function playGame() {
     results.textContent = "Scissor beats paper, You win!";
   }
     if (humanScore === 5){
-     winner.textContent = "You win!";
+     winner.textContent = "--Congratulations! You won!";
+     endGame();
 
   }
   else if(computerScore === 5){
-     winner.textContent = "Computer Wins!";
+     winner.textContent = "--Game over! Computer Wins!--";
+     endGame();
   }
+function endGame() {
+  // 1. Select all your game buttons (adjust the selector class to match your HTML)
+  const buttons = document.querySelectorAll('#game');
 
+  // 2. Loop through each button and disable it
+  buttons.forEach(button => {
+    button.disabled = true;
+  });
+
+  console.log("Game over! Buttons disabled.");
+}
   });
 });
 
@@ -85,8 +97,6 @@ function playGame() {
 };
 playGame();
 
-function endGame() {
-  
-}
+
 
 

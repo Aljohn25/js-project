@@ -11,26 +11,42 @@
 </head>
 <body>
     <div id="gameTitle"> 
-        <h1 class="headerTitle"> ------------------------------------------------- ROCK, PAPER AND SCISSORS GAME ------------------------------------------------- </h1> 
+        <h1 class="headerTitle"> ROCK, PAPER AND SCISSORS GAME </h1> 
+    </div>
+    
+    <div class="belowTitle">
+        <div id="humanScore">Your Score: 0</div>
+        
+        <div id="computerScore">Computer Score: 0</div>
     </div>
 
-    <div class="belowTitle">
-        <div id=humanScore>Your Score: 0</div>
-        <div> Play to the best of 5!</div>
-        <div id=computerScore>Computer Score: 0</div>
+    <div class="winre">
+        <div id="winner">BEST OF 5!</div>
+        <div> </div>
+        <div id="results">--- ---</div>
     </div>
+    <!-- <div id="winner">--- ---</div> -->
+
     <div class="displayChoice">
-        <div id="humanChoice"> </div>
-        <div id="computerChoice"> </div>
+        <div id="humanChoice"> Your choice</div>
+        <div class="vs">VS </div>
+        <div id="computerChoice"> Computer choice</div>
     </div>
-    
-    <div id="choices">
-        <button>ROCK</button>
-        <button>PAPER</button>
-        <button>SCISSORS</button>
+
+    <div class="gamechoice">
+        <div id="choices">
+            <button id="game">ROCK</button>
+            <button id="game">PAPER</button>
+            <button id="game">SCISSORS</button>
+        </div>
     </div>
-    
-    <div id="results"> </div>
-    <div id="winner">--- ---</div>
+
+    <div id="replay">
+        <button class="restart">RESTART</button>
+    </div>
+
+    <footer>
+        <p>Copyrights © Rock, Paper and Scissors Game 2026 by Aljohn Moorhead</p>
+    </footer> 
 </body>
 </html>
