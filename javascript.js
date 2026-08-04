@@ -30,13 +30,6 @@ function playGame() {
     displayHumanChoice.textContent = "You chose " + humanChoice.charAt(0).toUpperCase() + humanChoice.slice(1) + "!";
     displayComputerChoice.textContent = "Computer chose " + computerChoice.charAt(0).toUpperCase() + computerChoice.slice(1) + "!";
 
-    if (humanChoice === 'rock') {
-      console.log('You chose rock!');
-    } else if (humanChoice === 'paper') {
-      console.log('You chose paper!');
-    } else if (humanChoice === 'scissors') {
-      console.log('You chose scissors!');
-    }
     if (humanChoice === computerChoice){
     results.textContent = "It's a tie! 😑";
 
@@ -82,16 +75,14 @@ function playGame() {
      endGame();
   }
 function endGame() {
-  // 1. Select all your game buttons (adjust the selector class to match your HTML)
+
   const buttons = document.querySelectorAll('.game');
 
-  // 2. Loop through each button and disable it
   buttons.forEach(button => {
     button.disabled = true;
   });
-
-  console.log("Game over! Buttons disabled.");
 }
+
   });
 });
 
